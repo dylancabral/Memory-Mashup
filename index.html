@@ -10,6 +10,7 @@
 
 <body>
     <header>
+
         <ul>
             <li>Link</li>
             <li>Link</li>
@@ -19,6 +20,18 @@
         <div></div>
     </header>
     <main>
+            <aside>
+            <form id="userForm">
+                <fieldset>
+                    <legend>Create a New User Profile</legend>
+                    <label>Username:
+                        <input id="userInput" name="userName" type="text" placeholder="Create a username" required>
+                    </label>
+                </fieldset>
+                <button id="btn1" type="button">Submit</button>
+            </form>
+        </aside>
+        <p class="greetings" id="greetings1"></p>
         <section id="OurBio">
             <div id="firstBox">
                 <h3>Local Storage Event</h3>
@@ -56,5 +69,9 @@
             <li>Link3</li>
         </ul>
     </footer>
+    <script src="js/homeapp.js"></script>
     <script src="js/app.js"></script>
 </body>
+
+</html>
+
