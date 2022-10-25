@@ -4,18 +4,24 @@ header {
   width:100%;
   /* height: 100px; */
   background-color: blueviolet;
-  
-}
+  display: flex;
+  justify-content: space-between;
+  }
 
 header ul {
   display:flex;
   width: 25%;
+  align-items: end;
 
+}
+header div {
+width:25%;
 }
 
 header ul li {
   justify-content: flex-start;
-  margin: 20px;
+  margin: 0 20px;
+  margin-bottom: 8px;
   
 }
 
@@ -56,18 +62,18 @@ h2 {
   display:inline-block;
   width: 60%;
 }
+
 h3 {
 text-align: center;
 font-size: 30px;
 padding: 5px;
 }
+
 #footer {
   border: 3px solid red;
   width:100%;
-  height: 0px;
+  height: 120px;
   background-color: blueviolet;
-  
-
 }
 
 #footer ul {
