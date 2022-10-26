@@ -100,7 +100,7 @@ function shuffleGamePieces(arr) {
 pieces(gamePiecesArray);
 randomize(gpIndexArray);
 
-console.log(array);
+// console.log(array);
 
 function boardSet() {
     let array = shuffleGamePieces(gameArray);
@@ -186,6 +186,11 @@ function boardSet() {
     gmpiece20.src = gameArray[piece20].src;
     gmpiece20.name = gameArray[piece20].name;
 }
+
+const theBtn = document.getElementById('myBtn');
+    theBtn.addEventListener('click', function(e) {
+    console.log('The button was clicked!');
+    });
 
 /*
 function gamePlays(e) {
