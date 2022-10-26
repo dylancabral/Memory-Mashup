@@ -89,7 +89,7 @@ function shuffleGamePieces(arr) {
     //push card corelation to array
     // 10 indexes with their pair of cards
     // extraxt each card 1-20 from inner array to a new array
-    //for loop with i and j value NESTED
+        //for loop with i and j value NESTED
     //randomize positioning
     //select random postion from 1-20 IDS
     randomize(arr);
