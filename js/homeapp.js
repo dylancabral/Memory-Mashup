@@ -50,4 +50,15 @@ else {
 
 console.log(userArray);
   
-btn1.addEventListener('click', welcome);
+// btn1.addEventListener('click', welcome);
+
+const myBtn = document.getElementById('myBtn');
+    myBtn.addEventListener('click', function(e) {
+    console.log('The button was clicked!');
+    });
+
+    // const playBtn = document.getElementById('playBtn');
+    // playBtn.addEventListener('click', function(e) {
+    // playBtn.style.display = 'none';
+    // });
+

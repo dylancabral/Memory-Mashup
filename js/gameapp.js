@@ -65,9 +65,16 @@ function randomize() {
     }
 }
 
+
 randomize();
 let randomPieces = [];
 randomPieces = [...randomPieces1, ...randomPieces1];
+=======
+pieces(gamePiecesArray);
+randomize(gpIndexArray);
+
+// console.log(array);
+
 
 function boardSet() {
     let array = [...randomPieces];
@@ -134,7 +141,14 @@ function boardSet() {
     gmpiece20.name = gamePiecesArray[piece20].name;
 }
 
+
 boardSet();
+
+const theBtn = document.getElementById('myBtn');
+    theBtn.addEventListener('click', function(e) {
+    console.log('The button was clicked!');
+    });
+
 
 /*
 function gamePlays(e) {
