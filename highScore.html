@@ -5,7 +5,7 @@
     <title>Memory Mashup</title>
     <link href="css/reset.css" type="text/css" rel="stylesheet" />
     <link href="css/style2.css" type="text/css" rel="stylesheet" />
-   
+
 </head>
 
 <body>
@@ -19,22 +19,65 @@
         <div></div>
     </header>
     <main>
-        <section id="OurBio">
-            <div id="firstBox">
-                <h3>Highscore</h3>
-                <p> Storage Event Will take place here.</p>
-            </div>
+        <div id="leaderboard" class="container">
+            <!-- <!scores will be inserted by the script here -->
+        </div>
 
+
+
+        <!-- <div class="hiscore"> -->
+            <!-- <h2>Top 5 clickers</h2>
+            <h3>(on this device)</h3>
+            <button onClick="clearScores()">Clear</button>
+            <table class="scoretable">
+            </table>
+          </div> -->
+
+
+
+
+        <!-- <div id="firstBox">
+            <h3>Highscore</h3>
+            <p> Storage Event Will take place here.</p>
+            <div class="leaderBoard">
+                <table>
+                    <thead>
+                        <tr>
+                            <td>Rank</td>
+                            <td>
+                                Player
+                            </td>
+                            <td>
+                                Score
+                            </td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td id="winner">1</td>
+                            <td><p>mike</p></td>
+                            <td>25</td>
+                        </tr>
+                        <tr>
+                            <td id="runner-up">2</td>
+                            <td><p>Dylan</p></td>
+                            <td>20</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div> -->
+        <section id="OurBio">
             <h2>About Us</h2>
             <div id="bios">
                 <div class="bio" id="Mike"> About Us<img src="images/goat.jpg" alt="a picture of a goat"></div>
                 <div class="bio" id="Dylan">Credits<img src="images/goat.jpg" alt="a picture of a goat">
                 </div>
-                
+
             </div>
+        </section>
 
     </main>
-    </section>
     <footer id="footer">
         <ul>
             <li>Link1</li>
@@ -42,5 +85,6 @@
             <li>Link3</li>
         </ul>
     </footer>
-    <script src="js/app.js"></script>
+    <!-- <script src="js/homeapp.js"></script> -->
+    <script src="js/scoreapp.js"></script>
 </body>
