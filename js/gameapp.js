@@ -57,6 +57,7 @@ function Gamepiece(name, location) {
     this.location = location;
     this.timesUsed = 0;
     this.timesFlipped = 0;
+    // gamePiecesArray.push([this, this]); double array within the existing array
     gamePiecesArray.push(this);
 }
 
@@ -83,6 +84,14 @@ function randomize(arr) {
 }
 
 function shuffleGamePieces(arr) {
+    //10 numbers 
+    //use numbers to select corelating icons
+    //push card corelation to array
+    // 10 indexes with their pair of cards
+    // extraxt each card 1-20 from inner array to a new array
+    //for loop with i and j value NESTED
+    //randomize positioning
+    //select random postion from 1-20 IDS
     randomize(arr);
     let index = gameArray.length;
     let temp = [];
@@ -100,7 +109,7 @@ function shuffleGamePieces(arr) {
 pieces(gamePiecesArray);
 randomize(gpIndexArray);
 
-console.log(array);
+// console.log(array);
 
 function boardSet() {
     let array = shuffleGamePieces(gameArray);
