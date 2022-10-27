@@ -195,7 +195,7 @@ function gamePlays(e) {
     if (e.target === gameBoard) {
       alert("Please click on a game piece!");
     }
-     let piecea = e.target.name;
+     let piece = e.target.name;
      HOW TO FLIP OVER
      let pieceb = e.target.name;
      HOW TO FLIP OVER
@@ -251,3 +251,4 @@ function gameState(e) {
 
 gamePlay();
 */
+
