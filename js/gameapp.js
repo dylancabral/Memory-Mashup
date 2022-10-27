@@ -51,15 +51,15 @@ randomize();
 let randomPieces = [];
 randomPieces = [...randomPieces1, ...randomPieces1];
 
-
-// pieces(gamePiecesArray);
-// randomize(gpIndexArray);
-
-
-// console.log(array);
+function shufflePieces() {
+    let pieceData = [...randomPieces];
+    pieceData.sort(() => Math.random() - 0.5);
+    console.log(pieceData);
+    return pieceData;
+}
 
 function boardSet() {
-    let array = [...randomPieces];
+    let array = shufflePieces();
     console.log(array);
     for (let i = 0; i < 20; i++) {
         let x = array.shift();
@@ -69,7 +69,6 @@ function boardSet() {
         gmpieceArray[i].addEventListener('click', gamePlays);
     }
 }
-
 
 boardSet();
 // number of cards clicked = 0
@@ -85,6 +84,10 @@ function gamePlays(e) {
     // increment the number ofcards clicked +1 
     gameCardClicked++;
     // at on click add class to display card
+    if (gameCardClicked === gameBoard) {
+        alert("Please select a card!");
+    }
+
     if (gameCardClicked === 1) {
         firstCardClicked = e.target.name;
         console.log(firstCardClicked);
@@ -93,7 +96,7 @@ function gamePlays(e) {
         secondCardClicked = e.target.name;
         console.log(secondCardClicked);
         if (gameCardClicked === 2 && firstCardClicked === secondCardClicked) {
-            alert("Congrats you got a match! Keep going!")
+            alert("Congrats you got a match! Keep going!");
             gameCardClicked = 0;
         }
         if (gameCardClicked === 2 && firstCardClicked !== secondCardClicked) {
@@ -182,7 +185,3 @@ function gamePlays(e) {
 //         }
 //     }
 // }
-
-
-gamePlay();
-
