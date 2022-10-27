@@ -358,17 +358,17 @@ footer {
   margin-top: 2rem;
 }
 
-
-header {
+/* 
+ header { 
   border: 3px solid red;
   width:100%;
-  /* height: 100px; */
+   height: 100px; 
   background-color: blueviolet;
   display: flex;
   justify-content: space-between;
-  }
+  } */
 
-header ul {
+/* header ul {
   display:flex;
   width: 25%;
   align-items: end;
@@ -383,7 +383,7 @@ header ul li {
   margin: 0 20px;
   margin-bottom: 8px;
   
-}
+} */
 
 #bios {
   display: flex;
@@ -429,25 +429,25 @@ font-size: 30px;
 padding: 5px;
 }
 
-#footer {
+/* #footer {
   border: 3px solid red;
   width:100%;
   height: 120px;
   background-color: blueviolet;
-}
+} */
 
-#footer ul {
-  /* display:inline-block;
-  width: 25%; */
+/* #footer ul {
+  display:inline-block;
+  width: 25%;
   display:flex;
   justify-content: flex-start;
-}
+} */
 
-#footer ul li {
+/* #footer ul li {
   margin: 20px;
   /* margin-left: 100%; */
 
-}
+/* } */ 
 
 .flipPiece {
   transform: rotateY(180deg);
