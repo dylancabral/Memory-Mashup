@@ -11,6 +11,7 @@ document.querySelector('#four img'), document.querySelector('#five img'), docume
 // Global Arrays
 let maxAttempt = 3;
 let attempts = 0;
+let attempts = 0;
 
 let gamePiecesArray = [];
 let piecesInPlay = [];
@@ -103,6 +104,7 @@ function evalPieces() {
         currentUser.score++;
         alert("Congrats you got a match! Keep going!");
         gameCardClicked = 0;
+        console.log(currentUser.score);
     }
     if (firstCardClicked !== secondCardClicked) {
         attempts++;
@@ -128,10 +130,14 @@ function gamePlays(e) {
         firstCardClicked = e.target.name;
         domElement1 = document.querySelector(`#game img[id="${e.target.id}"]`);
         domElement1.classList.add("display");
+        domElement1 = document.querySelector(`#game img[id="${e.target.id}"]`);
+        domElement1.classList.add("display");
         console.log(firstCardClicked);
     }
     if (gameCardClicked === 2) {
         secondCardClicked = e.target.name;
+        domElement2 = document.querySelector(`#game img[id="${e.target.id}"]`);
+        domElement2.classList.add("display");
         domElement2 = document.querySelector(`#game img[id="${e.target.id}"]`);
         domElement2.classList.add("display");
         console.log(secondCardClicked);

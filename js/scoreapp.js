@@ -6,7 +6,7 @@
   //  create a variable to house name and score from currentUser array
 
 let playername = currentUser.name;
-let playerscore = currentUser.highScore;
+let playerscore = currentUser.score;
 let leaderboard = document.getElementById("leaderboard");
 
 
