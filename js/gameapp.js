@@ -56,7 +56,7 @@ function randomize() {
 randomize();
 let randomPieces = [];
 randomPieces = [...randomPieces1, ...randomPieces1];
-=======
+
 pieces(gamePiecesArray);
 randomize(gpIndexArray);
 
@@ -86,13 +86,6 @@ function gamePlays(e) {
     console.log('The button was clicked!');
     });
 
-
-
-
-
-
-
-
     gmpieceArray[0].addEventListener("click", flipPiece);
 
     function flipPiece() {
@@ -117,7 +110,7 @@ function gamePlays(e) {
         Change img to celebration img
         push to piecesMatched array;
         remove piecea, pieceb from piecesInPlay array
-    
+
     if piecea !== pieceb
         message "Sorry not a matching pair, 1 attempt gone."
         Attempt++
