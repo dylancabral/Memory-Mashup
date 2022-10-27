@@ -15,6 +15,10 @@ h1 {
 
 }
 
+#links {
+  list-style:
+}
+
 a {
   text-decoration: none;
   color: aliceblue;
@@ -83,11 +87,16 @@ font-size: xx-large;
   grid-column-start: 4;
   grid-column-end: 6;
   background-color: #99d9d9;
-  height: 100px;
+  height: 105px;
   width:400px;
-  margin: auto;
+  margin-right: 400px;
+  margin-top: 20px;
   border:solid aliceblue 2px;
   color: #001628;
+}
+
+#playBtn {
+margin-left: 300px;
 }
 
 button {
