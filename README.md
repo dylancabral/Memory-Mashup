@@ -1,6 +1,6 @@
 # Memory mashup
 
-Mike 
+Mike McCarty
 Angelos Kounavis
 Ricardo Soto
 Dylan Cabral
