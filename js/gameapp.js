@@ -69,7 +69,7 @@ function randomize() {
 randomize();
 let randomPieces = [];
 randomPieces = [...randomPieces1, ...randomPieces1];
-=======
+// =======
 pieces(gamePiecesArray);
 randomize(gpIndexArray);
 
