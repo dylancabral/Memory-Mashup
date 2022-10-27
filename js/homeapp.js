@@ -19,6 +19,7 @@ function User(name) {
 
 function welcome(event) {
   event.preventDefault();
+
   // let userInput = document.getElementById('userInput').value;
   let name = userInput.value;
   
@@ -53,26 +54,30 @@ let checkLocalStorage = function() {
 // }
 }
 
-
 checkLocalStorage();
-
 
 console.log(currentUser);
 
-
 btn1.addEventListener('click', welcome);
 console.log(userArray);
-  
+
 // btn1.addEventListener('click', welcome);
 
 const myBtn = document.getElementById('myBtn');
-    myBtn.addEventListener('click', function(e) {
-    console.log('The button was clicked!');
-    });
+myBtn.addEventListener('click', function (e) {
+  console.log('The button was clicked!');
+});
 
-    // const playBtn = document.getElementById('playBtn');
-    // playBtn.addEventListener('click', function(e) {
-    // playBtn.style.display = 'none';
-    // });
+// const playBtn = document.getElementById('playBtn');
+// playBtn.addEventListener('click', function(e) {
+// playBtn.style.display = 'none';
+// });
 
+
+let instructionBtn = document.getElementById('instruction').style.display = 'none';
+let howToBtn = document.getElementById('howTo');
+howToBtn.addEventListener('click', showInstructions)
+function showInstructions() {
+instructionBtn = document.getElementById('instruction').style.display = 'block';
+}
 
