@@ -55,7 +55,7 @@ font-size: xx-large;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  height: 100px;
+  height: auto;
   border: solid aliceblue 5px;
   border-radius: 5px;
   padding: 1rem;
@@ -66,7 +66,33 @@ font-size: xx-large;
   margin:2rem auto;
 
 }
+form{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  line-height: 200%;
+}
+#howTo2 {
+  font-family: 'Varela Round', sans-serif;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: auto;
+  border: solid aliceblue 5px;
+  border-radius: 5px;
+  padding: 1rem;
+  background-color: #001628;
+  margin-top: 2rem;
+  color: aliceblue;
+  width: 1300px;
+  margin:2rem auto;
 
+}
+#firstBox {
+  height:auto;
+  margin-bottom: 0;
+
+}
 #attempts{
   display: grid;
   grid-row-start: 1;
@@ -97,6 +123,10 @@ font-size: xx-large;
 
 #playBtn {
 margin-left: 300px;
+}
+
+#btn1{
+  margin-left: 2rem;
 }
 
 button {
@@ -142,6 +172,8 @@ img {
   opacity: 90%;
 }
 
+
+/*-------------- gamePieces---------------- */
 #one {
   width: 120px;
   height: 120px;
@@ -389,8 +421,9 @@ header ul li {
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
-  margin-top: 50px;
-  margin-bottom: 200px;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  height: 200px;
 }
 
 .bio {
