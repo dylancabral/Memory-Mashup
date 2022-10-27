@@ -55,7 +55,7 @@ font-size: xx-large;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  height: 100px;
+  height: auto;
   border: solid aliceblue 5px;
   border-radius: 5px;
   padding: 1rem;
@@ -66,7 +66,33 @@ font-size: xx-large;
   margin:2rem auto;
 
 }
+form{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  line-height: 200%;
+}
+#howTo2 {
+  font-family: 'Varela Round', sans-serif;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: auto;
+  border: solid aliceblue 5px;
+  border-radius: 5px;
+  padding: 1rem;
+  background-color: #001628;
+  margin-top: 2rem;
+  color: aliceblue;
+  width: 1300px;
+  margin:2rem auto;
 
+}
+#firstBox {
+  height:auto;
+  margin-bottom: 0;
+
+}
 #attempts{
   display: grid;
   grid-row-start: 1;
@@ -97,6 +123,10 @@ font-size: xx-large;
 
 #playBtn {
 margin-left: 300px;
+}
+
+#btn1{
+  margin-left: 2rem;
 }
 
 button {
@@ -142,6 +172,8 @@ img {
   opacity: 90%;
 }
 
+
+/*-------------- gamePieces---------------- */
 #one {
   width: 120px;
   height: 120px;
@@ -358,17 +390,17 @@ footer {
   margin-top: 2rem;
 }
 
-
-header {
+/* 
+ header { 
   border: 3px solid red;
   width:100%;
-  /* height: 100px; */
+   height: 100px; 
   background-color: blueviolet;
   display: flex;
   justify-content: space-between;
-  }
+  } */
 
-header ul {
+/* header ul {
   display:flex;
   width: 25%;
   align-items: end;
@@ -383,14 +415,15 @@ header ul li {
   margin: 0 20px;
   margin-bottom: 8px;
   
-}
+} */
 
 #bios {
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
-  margin-top: 50px;
-  margin-bottom: 200px;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  height: 200px;
 }
 
 .bio {
@@ -429,25 +462,25 @@ font-size: 30px;
 padding: 5px;
 }
 
-#footer {
+/* #footer {
   border: 3px solid red;
   width:100%;
   height: 120px;
   background-color: blueviolet;
-}
+} */
 
-#footer ul {
-  /* display:inline-block;
-  width: 25%; */
+/* #footer ul {
+  display:inline-block;
+  width: 25%;
   display:flex;
   justify-content: flex-start;
-}
+} */
 
-#footer ul li {
+/* #footer ul li {
   margin: 20px;
   /* margin-left: 100%; */
 
-}
+/* } */ 
 
 .flipPiece {
   transform: rotateY(180deg);
