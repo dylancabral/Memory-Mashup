@@ -4,14 +4,9 @@
 let playGame = document.querySelector('#play-gameB');
 let gameAgain = document.querySelector('#play-againB');
 
-
 let gameBoard = document.querySelector('#game');
 let gmpieceArray = [document.querySelector('#one img'), document.querySelector('#two img'), document.querySelector('#three img'),
-document.querySelector('#four img'), document.querySelector('#five img'), document.querySelector('#six img'), document.querySelector('#seven img'),
-document.querySelector('#eight img'), document.querySelector('#nine img'), document.querySelector('#ten img'), document.querySelector('#eleven img'),
-document.querySelector('#twelve img'), document.querySelector('#thirteen img'), document.querySelector('#fourteen img'), document.querySelector('#fifteen img'),
-document.querySelector('#sixteen img'), document.querySelector('#seventeen img'), document.querySelector('#eighteen img'), document.querySelector('#nineteen img'),
-document.querySelector('#twenty img')];
+document.querySelector('#four img'), document.querySelector('#five img'), document.querySelector('#six img'), document.querySelector('#seven img'), document.querySelector('#eight img'), document.querySelector('#nine img'), document.querySelector('#ten img'), document.querySelector('#eleven img'), document.querySelector('#twelve img'), document.querySelector('#thirteen img'), document.querySelector('#fourteen img'), document.querySelector('#fifteen img'), document.querySelector('#sixteen img'), document.querySelector('#seventeen img'), document.querySelector('#eighteen img'), document.querySelector('#nineteen img'), document.querySelector('#twenty img')];
 
 // Global Arrays
 let maxAttempt = 3;
@@ -52,20 +47,18 @@ function randomize() {
     }
 }
 
-
 randomize();
 let randomPieces = [];
 randomPieces = [...randomPieces1, ...randomPieces1];
 
-pieces(gamePiecesArray);
-randomize(gpIndexArray);
+// pieces(gamePiecesArray);
+// randomize(gpIndexArray);
 
 // console.log(array);
 
-
 function boardSet() {
     let array = [...randomPieces];
-
+    console.log(array);
     for (let i = 0; i < 20; i++) {
         let x = array.shift();
         gmpieceArray[i].src = gamePiecesArray[x].src;
@@ -77,22 +70,55 @@ function boardSet() {
 
 
 boardSet();
+// number of cards clicked = 0
+let gameCardClicked = 0;
+
+// name of the first card clicked
+let firstCardClicked;
+
+// name of the second card clicked
+let secondCardClicked;
 
 function gamePlays(e) {
-    boardSet();
+    // increment the number ofcards clicked +1 
+    gameCardClicked++;
+    // at on click add class to display card
+    if (gameCardClicked === 1) {
+        firstCardClicked = e.target.name;
+        console.log(firstCardClicked);
+    }
+    if (gameCardClicked === 2) {
+        secondCardClicked = e.target.name;
+        console.log(secondCardClicked);
+        if (gameCardClicked === 2 && firstCardClicked === secondCardClicked) {
+            alert("Congrats you got a match! Keep going!")
+            gameCardClicked = 0;
+        }
+        if (gameCardClicked === 2 && firstCardClicked !== secondCardClicked) {
+            alert("Sorry not a matching pair, 1 attempt gone.")
+            gameCardClicked = 0;
+        }
+    }
 
-    const theBtn = document.getElementById('myBtn');
-    theBtn.addEventListener('click', function(e) {
-    console.log('The button was clicked!');
-    });
+    // Add class to clicked Element using JavaScript #
 
+    // Use the target property on the event object to get the clicked element.
+    // Use the classList. add() method to add a class to the element.
+    // if # of cards clicked = 2 ---> compare values
+
+    // if matched leave class enabled 
+
+    // if not equal reset cards clicked to 0 to remove class (can add 0 opacity to prevent card from showing)
     gmpieceArray[0].addEventListener("click", flipPiece);
 
     function flipPiece() {
         gmpieceArray[0].classList.toggle("flipPiece");
     }
 
-
+    const theBtn = document.getElementById('myBtn');
+    theBtn.addEventListener('click', function (e) {
+        console.log('The button was clicked!');
+    });
 
     /*
     bring in current userObject
@@ -110,6 +136,7 @@ function gamePlays(e) {
         Change img to celebration img
         push to piecesMatched array;
         remove piecea, pieceb from piecesInPlay array
+        // IF MATCHED NEED TO ADD CLASS
 
     if piecea !== pieceb
         message "Sorry not a matching pair, 1 attempt gone."
