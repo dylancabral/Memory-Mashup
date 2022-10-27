@@ -22,7 +22,7 @@ function welcome(event) {
   let name = document.getElementById('userInput').value;
 
   message.innerHTML = 'Welcome ' + userInput + ' to Memory Mashup!';
-  
+
   let newUser = new User(name);
   checkLocalStorage();
   console.log(userArray);
@@ -35,30 +35,36 @@ function welcome(event) {
 
 
 // local storage
-let checkLocalStorage = function() {
-var retrievedData = JSON.parse(localStorage.getItem("profiles"));
-console.log(retrievedData);
-if (retrievedData) {
-  userArray = retrievedData;
-  console.log(userArray);
-} 
-else {
-// else userArray will be an empty array
-  console.log(userArray);
-}
+let checkLocalStorage = function () {
+  var retrievedData = JSON.parse(localStorage.getItem("profiles"));
+  console.log(retrievedData);
+  if (retrievedData) {
+    userArray = retrievedData;
+    console.log(userArray);
+  }
+  else {
+    // else userArray will be an empty array
+    console.log(userArray);
+  }
 }
 
 console.log(userArray);
-  
+
 // btn1.addEventListener('click', welcome);
 
 const myBtn = document.getElementById('myBtn');
-    myBtn.addEventListener('click', function(e) {
-    console.log('The button was clicked!');
-    });
+myBtn.addEventListener('click', function (e) {
+  console.log('The button was clicked!');
+});
 
-    // const playBtn = document.getElementById('playBtn');
-    // playBtn.addEventListener('click', function(e) {
-    // playBtn.style.display = 'none';
-    // });
+// const playBtn = document.getElementById('playBtn');
+// playBtn.addEventListener('click', function(e) {
+// playBtn.style.display = 'none';
+// });
 
+let instructionBtn = document.getElementById('instruction').style.display = 'none';
+let howToBtn = document.getElementById('howTo');
+howToBtn.addEventListener('click', showInstructions)
+function showInstructions() {
+instructionBtn = document.getElementById('instruction').style.display = 'block';
+}
