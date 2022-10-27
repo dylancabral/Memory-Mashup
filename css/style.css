@@ -449,3 +449,6 @@ padding: 5px;
 
 }
 
+.flipPiece {
+  transform: rotateY(180deg);
+}
