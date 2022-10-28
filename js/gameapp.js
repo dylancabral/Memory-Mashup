@@ -88,7 +88,6 @@ boardSet();
 // number of cards clicked = 0
 let gameCardClicked = 0;
 
-// gmpieceArray.classList.add("defaultPiece");
 // name of the first card clicked
 let firstCardClicked;
 
@@ -98,13 +97,16 @@ let secondCardClicked;
 let domElement1;
 let domElement2;
 
+
 function evalPieces() {
     if (firstCardClicked === secondCardClicked) {
         currentUser.score++;
         alert("Congrats you got a match! Keep going!");
         gameCardClicked = 0;
+        localStorage.setItem("profile", JSON.stringify(currentUser));
         console.log(currentUser.score);
     }
+
     if (firstCardClicked !== secondCardClicked) {
         attempts++;
         alert(`Sorry not a matching pair. You have ${maxAttempt - attempts} left.`);
@@ -113,6 +115,11 @@ function evalPieces() {
         domElement2.classList.remove("display");
         if (maxAttempt === attempts) {
             alert(`YOU LOSE! You have no attempts left!`);
+            let txtEndTitle = document.getElementById('txtEndTitle');
+            let txtEndMessage = document.getElementById('txtEndMessage');
+            txtEndTitle.innerHTML = 'The Computer beat YOU!';
+            txtEndMessage.innerHTML = 'Sorry you lost!';
+            document.getElementById('endScreen').style.display = 'flex';
         }
     }
 }
@@ -136,98 +143,6 @@ function gamePlays(e) {
         domElement2 = document.querySelector(`#game img[id="${e.target.id}"]`);
         domElement2.classList.add("display");
         console.log(secondCardClicked);
-        setTimeout(evalPieces, 1000);
+        setTimeout(evalPieces, 500);
     }
 }
-
-
-
-// const cards = gamePiecesArray
-
-// function flipCard() {
-//     for(let i = 0; i < cards.length; i++) { 
-//         if(cards[i].classList.contains('flipPiece')) cards[i].classList.remove('flipPiece') 
-//     }
-//     this.classList.toggle('flipPiece');
-// };
-
-// cards.forEach((card) =>card.addEventListener("click", flipCard));
-
-
-
-
-// Add class to clicked Element using JavaScript #
-
-// Use the target property on the event object to get the clicked element.
-// Use the classList. add() method to add a class to the element.
-// if # of cards clicked = 2 ---> compare values
-
-// if matched leave class enabled 
-
-// if not equal reset cards clicked to 0 to remove class (can add 0 opacity to prevent card from showing)
-
-const theBtn = document.getElementById('myBtn');
-theBtn.addEventListener('click', function (e) {
-    console.log('The button was clicked!');
-});
-
-/*
-bring in current userObject
-if (e.target === gameBoard) {
-  alert("Please click on a game piece!");
-}
- let piece = e.target.name;
- HOW TO FLIP OVER
- let pieceb = e.target.name;
- HOW TO FLIP OVER
-
-if piecea === pieceb
-     message "Congrats you got a match! Keep going!"
-    Score++
-    Change img to celebration img
-    push to piecesMatched array;
-    remove piecea, pieceb from piecesInPlay array
-    // IF MATCHED NEED TO ADD CLASS
-
-if piecea !== pieceb
-    message "Sorry not a matching pair, 1 attempt gone."
-    Attempt++
-     RETURN CARDS FACE DOWN
-
-if piecesMatched array.length === gameArray.length || piecesInPlay.length === 0;
-    message "Congrats you passed this round"
-    gameState()
-
-if user.attempts = maxAttempts;
-    message "Sorry you have no more clicks available!"
-    gameState();
-
-event listener...
-Step 2: TheEvent Listener
-gameBoard.addEventListener('click', gamePlays);
-*/
-
-
-// function gameState(e) {
-//     if (userScore === 10) {
-//         message: Would you like to play another round;
-//         if (user === yes || user === y) {
-//             gamePlay();
-//             HOW DOES CURRENT SCORE CONTINUE - localStorage?;
-//         }
-//         if (user !== yes || user !== y) {
-//             message thank you for playing.
-//             link to high score page;
-//         }
-//     }
-//     if (userScore < 10) {
-//         message: Would you like to play a new game;
-//         if (user === yes || user === y) {
-//             gamePlay();
-//         }
-//         if (user !== yes || user !== y) {
-//             message thank you for playing.
-//             link to high score page;
-//         }
-//     }
-// }

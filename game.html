@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,27 +9,31 @@
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
 </head>
 
 <body>
   <header>
-   
-    
+
+
     <div id="headerNav">
       <ul id="links">
-       <li><h1>Memory Mashup</h1></li> 
+        <li>
+          <h1>Memory Mashup</h1>
+        </li>
         <a href="index.html">About The Game</a>
         <a href="highScore.html">Scores</a>
-    </ul>
+      </ul>
     </div>
   </header>
   <main>
     <section id="howTo">
       <button id="playBtn" type="button">How To Play</button>
+
       <div id="instruction"><p>Play the game by flipping over two icons one at a time. If the cards are not the same pair you lose an attempt (you have only 3 attempts to guess right). If the icons are the same then you have to continue flipping until all icons have been paired.
       </p></div>
+
       <!-- <button>Click To Nerd Out!</button> -->
     </section>
     <section id="game">
@@ -53,6 +58,20 @@
       <div id="nineteen"><img class="facePc" src="images/twitter.svg"></div>
       <div id="twenty"><img class="facePc" src="images/twitter.svg"></div>
     </section>
+    
+    <div id="endScreen">
+      <div id="endScreenContent">
+        <h1 id="txtEndTitle">The Computer beat YOU!</h1>
+        <h2 id="txtEndMessage">Sorry you lost!</h2>
+        <a href="game.html">
+          <div id="btnReplay" class="buttonEnd1">Play Again</div>
+        </a>
+        <a href="highScore.html">
+          <div id="btnReplay2" class="buttonEnd2">High Scores</div>
+        </a>
+      </div>
+    </div>
+      
   </main>
   <footer>
     <div id="footerNav">
@@ -65,11 +84,22 @@
       </nav>
     </div>
   </footer>
+
+  <ul>
+    <a href="index.html">Memory Mashup Page</a>
+    <a href="highScore.html">HighScore Page</a>
+    <a href="about.html">About Page</a>
+  </ul>
   <script src="https://kit.fontawesome.com/6706ccb32a.js" crossorigin="anonymous"></script>
 
-    <script src="js/homeapp.js"></script>
-    <script src="js/gameapp.js"></script>
+  <a href="highScore.html">
+    <button id="myBtn" type="button">View Score</button>
+  </a>
+  <script src="js/homeapp.js"></script>
+  <script src="js/gameapp.js"></script>
+
 
 
 </body>
+
 </html>

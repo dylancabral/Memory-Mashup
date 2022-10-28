@@ -16,7 +16,6 @@ h1 {
 div h1{
   font-size:200%;
   font-family:  'Varela Round', sans-serif;;
-
 }
 
 a {
@@ -25,7 +24,6 @@ a {
   margin: 1rem;
   font-family: 'Varela Round', sans-serif;
   font-size: x-large;
-
 
 }
 
@@ -568,6 +566,7 @@ padding: 5px;
   transition: transform .2s;
 }
 
+
 li h1{
 font-size: xx-large;
   font-family: 'Varela Round', sans-serif; 
@@ -622,3 +621,85 @@ font-size: xx-large;
   margin: auto;
   width: 500px;
 }
+=======
+#endScreen {
+  position: absolute;
+  z-index: 101;
+  width: 1800px;
+  height: 700px;
+  background-color: rgba(33, 78, 192, 0.9);
+  display: none;
+  justify-content: center;
+}
+
+#endScreenContent {
+  width: 800px;
+  height: 500px;
+  padding: 20px;
+  margin-top: 50px;
+  background-color: rgb(207, 117, 117);
+  margin: 80 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#txtEndTitle {
+  font-size: 60px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  width: 60%;
+  padding: 30px;
+}
+
+#txtEndMessage {
+  font-size: 45px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  width: 60%;
+  padding: 30px;
+}
+
+.buttonEnd1, .buttonEnd2 {
+  border: 3px solid black;
+  background-color: #68a2b9;
+  width: 150px;
+  height: 30px;
+  color:#e2f8f8;
+  font-size: 20px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
+}
+
+.buttonEnd1:hover, .buttonEnd2:hover {
+  border: 5px solid red;
+  animation: effect 0.4s infinite;
+  background-color: #2d7a98;
+}
+
+@keyframes effect {
+  0% {
+      transform: translateX(0px) rotate(0deg);
+  }
+
+  20% {
+      transform: translateX(-4px) rotate(-4deg);
+  }
+
+  40% {
+      transform: translateX(-2px) rotate(-2deg);
+  }
+
+  60% {
+      transform: translateX(4px) rotate(4deg);
+  }
+
+  80% {
+      transform: translateX(2px) rotate(2deg);
+  }
+
+  100% {
+      transform: translateX(0px) rotate(0deg);
+  }
+}
+
+
