@@ -3,6 +3,7 @@ header {
   height: 120px;
   display: flex;
   justify-content: center;
+  align-items: center;
   background-color: #99d9d9;
   padding: 1rem;
 
@@ -11,12 +12,11 @@ header {
 
 h1 {
   margin: 1rem;
-
-
 }
+div h1{
+  font-size:200%;
+  font-family:  'Varela Round', sans-serif;;
 
-#links {
-  list-style:
 }
 
 a {
@@ -34,6 +34,8 @@ a {
   width: 100%;
   border-radius: 5px;
   border: solid #001628 5px;
+  display: flex;
+  flex-direction: column;
 
 }
 
@@ -66,11 +68,61 @@ font-size: xx-large;
   margin:2rem auto;
 
 }
+
+#howTo2{
+  font-family: 'Varela Round', sans-serif;
+  align-items: center;
+  border: solid aliceblue 5px;
+  border-radius: 5px;
+  padding: 1rem;
+  background-color: #001628;
+  margin-top: 2rem;
+  color: aliceblue;
+  width: 1300px;
+  margin:2rem auto;
+}
+
 form{
   display: flex;
   flex-direction: row;
   align-items: center;
   line-height: 200%;
+}
+#top5{
+height: 180px;
+margin: auto;
+width: 500PX;
+}
+
+#aboutUs{
+  height: 300px;
+  width: 700px;
+  margin: auto;
+  background-color: #001628;
+  border:solid #68a2b9 5px ;
+  color: aliceblue;
+  text-align: center;
+}
+#aboutUs img{
+
+  height: 100px;
+  width: 100px;
+  margin-right: 1rem;
+}
+
+#credits{
+  height: 300px;
+  width: 700px;
+  margin: auto;
+  background-color: #001628;
+  border:solid #68a2b9 5px ;
+  color: aliceblue;
+}
+#credits img{
+
+  height: 100px;
+  width: 100px;
+  margin-right: 1rem;
 }
 #howTo2 {
   font-family: 'Varela Round', sans-serif;
@@ -86,7 +138,15 @@ form{
   color: aliceblue;
   width: 1300px;
   margin:2rem auto;
+  height: 200px;
 
+}
+
+#top5{
+  display: flex;
+  flex-direction: column;
+  color: #001628;
+  justify-content: space-around;
 }
 #firstBox {
   height:auto;
@@ -388,6 +448,10 @@ footer {
   border: solid #001628 5px;
   width: 90%;
   margin-top: 2rem;
+  margin-left: auto;
+  margin-right: auto;
+  height: auto;
+
 }
 
 /* 
@@ -417,13 +481,18 @@ header ul li {
   
 } */
 
+#bios{
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+}
 #bios {
   display: flex;
   justify-content: space-evenly;
-  flex-wrap: wrap;
   margin-top: 2rem;
   margin-bottom: 2rem;
-  height: 200px;
+  height: 400px;
+  font-family: 'Varela Round', sans-serif; ;
 }
 
 .bio {
@@ -497,4 +566,59 @@ padding: 5px;
 .facePc:hover {
   transform: scale(1.1);
   transition: transform .2s;
+}
+
+li h1{
+font-size: xx-large;
+  font-family: 'Varela Round', sans-serif; 
+  text-align: center;
+}
+
+#Mike{
+  height: 350px;
+  margin: auto;
+  width: 250px;
+  background-color: #001628;
+  color: aliceblue;
+  border: solid  #68a2b9 5px;
+  text-align: center;
+}
+#Dylan{
+  height: 350px;
+  margin: auto;
+  width: 250px;
+  background-color: #001628;
+  color: aliceblue;
+  border: solid  #68a2b9 5px;
+  text-align: center;
+}
+
+#Ricardo{
+  height: 350px;
+  margin: auto;
+  width: 250px;
+  background-color: #001628;
+  color: aliceblue;
+  border: solid  #68a2b9 5px;
+  text-align: center;
+}
+
+#Angelos{
+  height: 350px;
+  margin: auto;
+  width: 250px;
+  background-color: #001628;
+  color: aliceblue;
+  border: solid  #68a2b9 5px;
+  text-align: center;
+}
+
+#footerNav button{
+  height: 50px;
+}
+
+#bios p{
+  height: 90px;
+  margin: auto;
+  width: 500px;
 }
